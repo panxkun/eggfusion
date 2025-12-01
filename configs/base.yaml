@@ -1,0 +1,45 @@
+# Dataset config
+Dataset:
+    type: "default"
+    preload: True
+
+
+# Viewer config
+Viewer:
+    width: 1280
+    height: 720
+    max_depth: 10
+    max_surfels_num: 1000000
+    image_scale: 0.2
+    update_freq: 100
+    
+# Tracking config
+Tracking:
+    pyramid_level: 3
+    pyramid_iters: [3, 3, 3]
+    angle_threshold: 20 # deg
+    distance_threshold: 0.1
+    use_rgb: False
+    rgb_weight: 0.1
+    use_sparse: False
+    sparse_weight: 0.0001
+
+
+# Mapping config
+Mapping:
+    add_opacity_thres: 0.8
+    add_depth_thres: 0.1
+    sample_ratio: 0.025
+    sample_ratio_init: 0.2
+    local_map_iter_init: 20
+    local_map_iter: 5
+    local_observe_thres: 10
+
+
+# System config
+System:
+    root_dir: "results"
+    save_dir: ""
+
+    depth_range_min: 0.1
+    depth_range_max: 5.0
