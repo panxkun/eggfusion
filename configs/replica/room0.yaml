@@ -1,0 +1,6 @@
+base_config: configs/base.yaml
+data_config: configs/replica/base.yaml
+
+Dataset:
+    scene: 'room0'
+    dataset_path: "datasets/replica/room0/"

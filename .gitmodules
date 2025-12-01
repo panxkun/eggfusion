@@ -1,0 +1,6 @@
+[submodule "submodules/orb-slam-deps"]
+	path = submodules/orb-slam-deps
+	url = https://github.com/panxkun/orb-slam-deps.git
+[submodule "submodules/diff-gaussian-surfels"]
+	path = submodules/diff-gaussian-surfels
+	url = https://github.com/panxkun/diff-gaussian-surfels.git

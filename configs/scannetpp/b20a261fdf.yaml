@@ -1,0 +1,20 @@
+base_config: configs/base.yaml
+data_config: configs/scannetpp/base.yaml
+
+Dataset:
+    scene: 'b20a261fdf'
+    dataset_path: "datasets/scannetpp/b20a261fdf/"
+    Calibration: # camera intrinsics before distortion or undisorted
+        fx: 625.4198376489373
+        fy: 627.0243493696458
+        cx: 876.0
+        cy: 584.0
+        k1: 0
+        k2: 0
+        p1: 0
+        p2: 0
+        k3: 0
+        width: 1752
+        height: 1168
+        depth_scale: 1000.0
+        distorted: False

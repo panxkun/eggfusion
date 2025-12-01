@@ -1,0 +1,90 @@
+Dataset:
+    type: 'scannetpp'
+    preload: True
+
+Viewer:
+    max_depth: 10
+    max_surfels_num: 3000000
+    image_scale: 0.2
+
+Tracking:
+    use_sparse: False
+
+    pyramid_level: 3
+    pyramid_iters: [3, 3, 3]
+    angle_threshold: 20 # deg
+    distance_threshold: 0.1
+    use_rgb: True
+    rgb_weight: 0.0001
+
+    residual_thres: 0.01
+    dx_threshold: 0.001
+    
+    check_keyframe_R: 20 # degree
+    check_keyframe_t: 0.3
+    sliding_window_size: 3
+
+Mapping:
+    add_opacity_thres: 0.99
+    add_depth_thres: 0.1
+    add_color_thres: 0.5
+    sample_ratio: 0.125
+    sample_ratio_init: 0.2
+    local_map_iter_init: 20
+    local_map_iter: 8
+    local_observe_thres: 30
+
+    position_lr : 0.00001
+    feature_lr : 0.0050
+    opacity_lr : 0.0001
+    scaling_lr : 0.0010
+    rotation_lr : 0.0001
+
+    final_position_lr : 0.0001
+    final_feature_lr : 0.0050
+    final_opacity_lr : 0.0001
+    final_scaling_lr : 0.001
+    final_rotation_lr : 0.0001
+
+    final_global_opt_iter: 20
+
+    init_scale_ratio: 3
+
+    sw_optimize_freq: 3
+    sw_add_freq: 1
+
+    color_weight: 1.0
+    depth_weight: 0.1
+    normal_weight: 1.0
+    reg_weight: 5.0
+    reg_weight_n: 1.0
+
+    fusion_dist_thres: 0.05
+    cull_dist_thres: 0.00
+
+    background: [1.0, 1.0, 1.0]
+
+    state_threshold: 20
+
+Surfel:
+    init_opacity: 0.99
+    scale_factor: 1.0
+    min_radius: 0.001
+    max_radius: 0.05
+    active_sh_degree: 3
+    max_sh_degree: 3
+
+    stable_grad_coeff: 1.0e-3
+    confidence_thres: 5.0
+    alpha_p: 0.5
+    alpha_n: 1
+
+System:
+    only_mapping: True
+    final_global_opt: True
+    eval_tracking: True
+    eval_render: True
+    eval_recon: True
+    reco_normal_threshold: 5
+    reco_depth_threshold: 0.01
+    reco_opacity_threshold: 0.9

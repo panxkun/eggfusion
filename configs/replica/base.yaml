@@ -1,0 +1,106 @@
+Dataset:
+    type: 'replica'
+    preload: True
+    Calibration:
+        fx: 600.0
+        fy: 600.0
+        cx: 599.5
+        cy: 339.5
+        k1: 0.0
+        k2: 0.0
+        p1: 0.0
+        p2: 0.0
+        k3: 0.0
+        width: 1200
+        height: 680
+        depth_scale: 6553.5
+        distorted: False
+
+Viewer:
+    max_depth: 10
+    max_surfels_num: 1000000
+    image_scale: 0.2
+
+Tracking:
+    orb_config: configs/replica/orb.yaml
+    orb_voc: submodules/orb_slam_deps/ORB-SLAM2-PYBIND/Vocabulary/ORBvoc.txt
+    use_sparse: False
+
+    pyramid_level: 3
+    pyramid_iters: [3, 3, 3]
+    angle_threshold: 20 # deg
+    distance_threshold: 0.1
+    use_rgb: True
+    rgb_weight: 0.0001
+
+    residual_thres: 0.01
+    dx_threshold: 0.001
+
+    check_keyframe_R: 20 # degree
+    check_keyframe_t: 0.3
+    sliding_window_size: 3
+
+Mapping:
+    add_opacity_thres: 0.8
+    add_depth_thres: 0.05
+    add_color_thres: 0.5
+    sample_ratio: 0.025
+    sample_ratio_init: 0.2
+    local_map_iter_init: 20
+    local_map_iter: 3
+    local_observe_thres: 30
+
+    position_lr : 0.00001
+    feature_lr : 0.001
+    opacity_lr : 0.00001
+    scaling_lr : 0.0005
+    rotation_lr : 0.0001
+
+    final_position_lr : 0.0000
+    final_feature_lr : 0.001
+    final_opacity_lr : 0.00001
+    final_scaling_lr : 0.001
+    final_rotation_lr : 0.000
+
+    final_global_opt_iter: 60
+
+    init_scale_ratio: 2.0
+
+    sw_optimize_freq: 6
+    sw_add_freq: 3
+
+    color_weight: 1.0
+    depth_weight: 1.0
+    normal_weight: 1.0
+    reg_weight: 10.0
+    reg_weight_n: 1.0
+    
+    fusion_dist_thres: 0.03
+    cull_dist_thres: 0.00
+
+    background: [1.0, 1.0, 1.0]
+
+    state_threshold: 30
+
+Surfel:
+    init_opacity: 0.99
+    scale_factor: 1.0
+    min_radius: 0.001
+    max_radius: 0.05
+    active_sh_degree: 3
+    max_sh_degree: 3
+
+    stable_grad_coeff: 1.0e-3
+    confidence_thres: 5.0
+    alpha_p: 1
+    alpha_n: 0.5
+
+System:
+    only_mapping: False
+    final_global_opt: True
+    eval_tracking: True
+    eval_render: True
+    eval_recon: True
+    reco_normal_threshold: 5
+    reco_depth_threshold: 0.01
+    reco_opacity_threshold: 0.8
