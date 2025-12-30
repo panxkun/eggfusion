@@ -1,7 +1,7 @@
 # EGG-Fusion: Efficient 3D Reconstruction with Geometry-aware Gaussian Surfel on the Fly
 
 <p align="center">
-    <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+    <a href="https://arxiv.org/abs/2512.01296" target="_blank">
         <img src="https://img.shields.io/badge/arXiv-Paper-red.svg?style=flat-square" alt="arXiv Paper"/>
     </a>
     <a href="https://zju3dv.github.io/eggfusion/" target="_blank">
