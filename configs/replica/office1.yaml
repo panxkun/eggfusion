@@ -1,0 +1,6 @@
+base_config: configs/base.yaml
+data_config: configs/replica/base.yaml
+
+Dataset:
+    scene: 'office1'
+    dataset_path: "datasets/replica/office1/"

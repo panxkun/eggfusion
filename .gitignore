@@ -1,0 +1,99 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyd
+*.pyo
+*.pkl
+*.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# pip
+pip-wheel-metadata/
+*.dist-info/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# === CMake / C++ Build ===
+build/
+_build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+CTestTestfile.cmake
+cmake_install.cmake
+install_manifest.txt
+
+# Compiled Object Files
+*.o
+*.obj
+*.so
+*.a
+*.out
+*.exe
+*.dll
+*.dylib
+
+# Ninja
+.ninja_deps
+.ninja_log
+
+# === CUDA ===
+*.ptx
+*.cubin
+*.fatbin
+*.linkinfo
+
+# === Python Build System ===
+dist/
+build/
+*.whl
+*.tar.gz
+.skbuild/
+*.manifest
+*.spec
+
+# === Editor / OS Specific ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.bak
+*.tmp
+*.user
+*.suo
+
+# === Test / Coverage ===
+.coverage
+coverage.xml
+htmlcov/
+.cache/
+.pytest_cache/
+
+# === Others ===
+*.log
+logs/
+
+submodules
+scripts
+results
+datasets
+imgui.ini
+
+run.sh
+
+thirdParty
+view.txt
+*.png
+
+seq*
