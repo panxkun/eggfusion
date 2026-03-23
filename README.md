@@ -1,7 +1,7 @@
 # EGG-Fusion: Efficient 3D Reconstruction with Geometry-aware Gaussian Surfel on the Fly
 
 <p align="center">
-    <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+    <a href="https://arxiv.org/abs/2512.01296" target="_blank">
         <img src="https://img.shields.io/badge/arXiv-Paper-red.svg?style=flat-square" alt="arXiv Paper"/>
     </a>
     <a href="https://zju3dv.github.io/eggfusion/" target="_blank">
@@ -48,7 +48,7 @@ We have tested the code on:
 **Clone Repository**
 
 ```bash
-git clone --recursive https://github.com/panxkun/eggfusion-dev.git
+git clone --recursive https://github.com/panxkun/eggfusion.git
 ```
 
 **Install Dependencies**
@@ -69,15 +69,15 @@ pip install --no-build-isolation .
 ```
 * Build cuda extension for diff-gaussian-surfel
 ```
-cd submodules/diff-gaussian-surfel
+cd submodules/diff-gaussian-surfels
 pip install --no-build-isolation .
 ```
 
 * Build ORB-SLAM2 dependencies
 ```
-./submodules/orb_slam_deps/build_orb.sh
+./submodules/orb-slam-deps/build_orb.sh
 ```
-please refer to this [link]() for more details if you occured 
+please refer to this [link](https://github.com/jskinn/ORB_SLAM2-PythonBindings) for more details if you occured problem while installing.
 
 ## Datasets
 
@@ -140,15 +140,11 @@ EGG-Fusion is licensed under the Apache License - see the [LICENSE](LICENSE) fil
 
 If you found this code/work to be useful in your own research, please considering citing the following:
 ```bibtex
-@inproceedings{eggfusion2025,
-  title     = {{EGG-Fusion}: Efficient 3D Reconstruction with Geometry-aware Gaussian Surfel on the Fly},
-  author    = {Pan, Xiaokun and Li, Zhenzhe and Ye, Zhichao and Zhai, Hongjia and Zhang, Guofeng},
-  booktitle = {SIGGRAPH Asia 2025 Conference Papers},
-  year      = {2025},
-  month     = dec,
-  address   = {Hong Kong, Hong Kong},
-  publisher = {ACM},
-  pages     = {1--11},
-  doi       = {10.1145/3757377.3763878},
+@inproceedings{pan2025egg,
+  title={EGG-Fusion: Efficient 3D Reconstruction with Geometry-aware Gaussian Surfel on the Fly},
+  author={Pan, Xiaokun and Li, Zhenzhe and Ye, Zhichao and Zhai, Hongjia and Zhang, Guofeng},
+  booktitle={Proceedings of the SIGGRAPH Asia 2025 Conference Papers},
+  pages={1--12},
+  year={2025}
 }
-``
+```
