@@ -121,8 +121,13 @@ def quaternion_from_axis_angle(axis, angle):
 
 def compute_rot(init_vec, target_vec):
     axis = torch.cross(init_vec, target_vec, dim=1)
-    axis = axis / (torch.norm(axis, p=2, dim=-1, keepdim=True) + 1e-8)
-    angle = torch.acos(torch.sum(init_vec * target_vec, dim=1)).unsqueeze(-1)
+    axis_norm = torch.norm(axis, p=2, dim=-1, keepdim=True)
+    dot = torch.sum(init_vec * target_vec, dim=1).clamp(-1.0 + 1e-6, 1.0 - 1e-6)
+    anti_parallel = (axis_norm.squeeze(-1) < 1e-6)
+    fallback_axis = torch.zeros_like(axis)
+    fallback_axis[:, 0] = 1.0  # rotate 180° around X
+    axis = torch.where(anti_parallel.unsqueeze(-1), fallback_axis, axis / (axis_norm + 1e-8))
+    angle = torch.acos(dot).unsqueeze(-1)
     rots = quaternion_from_axis_angle(axis, angle)
     return rots
 
